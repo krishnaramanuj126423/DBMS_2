@@ -1,0 +1,17 @@
+set serveroutput on;
+
+declare
+	a integer:=&a;
+	b integer:=&b;
+	c integer:=&c;
+	d integer:=&d;
+	e integer:=&e;
+	total integer; 
+	
+begin
+	total:=a+b+c+d+e;
+	dbms_output.put_line('total is:'||total);
+	dbms_output.put_line('percentage is='||total/5);
+end;
+/
+	

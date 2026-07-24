@@ -1,0 +1,18 @@
+set serveroutput on;
+
+declare
+	
+	a number(6):=50;
+	b number(6):=60;
+	c number(6):=70;
+	d number(6):=80;
+	e number(6):=90;
+	f number(6);
+	g number(5,2);
+begin
+	f:=a+b+c+d+e;
+	g:=f/5;
+	dbms_output.put_line('total is='||f);
+	dbms_output.put_line('percentage is='||g);
+end;
+/
