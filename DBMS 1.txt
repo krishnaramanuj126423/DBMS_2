@@ -1,0 +1,6 @@
+set serveroutput on;
+
+begin 
+	dbms_output.put_line('BCA-3B');
+end;
+/

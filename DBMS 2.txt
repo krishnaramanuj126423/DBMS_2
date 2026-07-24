@@ -1,0 +1,25 @@
+declare
+
+   a number(3):=5;
+   b number(3):=5;
+   c number(3);
+
+begin
+	dbms_output.put_line (a+b);
+end; 
+/
+
+
+
+
+declare
+
+   a number(3):=5;
+   b number(3):=5;
+   c number(3);
+
+begin
+	c:=a+b;
+	dbms_output.put_line (a+b/c);
+end; 
+/

@@ -1,0 +1,12 @@
+set serveroutput on;
+
+declare
+	a number(3):=5;
+	b number(3):=a*a;
+	c number(3):=a*a*a;
+
+begin
+	dbms_output.put_line('square'||b);
+	dbms_output.put_line('square'||c);
+end;
+/
