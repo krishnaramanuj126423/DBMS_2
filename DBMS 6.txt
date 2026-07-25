@@ -1,0 +1,20 @@
+set serveroutput on;
+
+declare
+	name varchar2(15):='&name';
+	pan varchar2(12):='&pan';  
+	hra number(6):=5&hra;
+   	ta number(6):=&ta;
+    	da number(6):=&da;
+    	basic number(6):=&basic;
+    	tds number(6):=&tds;
+	gross number(7):=hra+ta+da+basic-tds;
+
+begin
+	dbms_output.put_line('Name='||name);
+	dbms_output.put_line('pancard no='||pan);
+	dbms_output.put_line('total salary='||gross);
+end;
+/
+
+
