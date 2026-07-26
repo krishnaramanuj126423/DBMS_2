@@ -1,0 +1,17 @@
+Example: write a program to read a number form user and determine
+         whether it is odd or even.
+
+set serveroutput on;
+
+declare
+	no number;
+begin
+	dbms_output.put_line('enter value for no:');
+	no:=&no;
+	if mod(no,2) = 0 then
+	   dbms_output.put_line('given number'||no||'is even.');
+	else
+	   dbms_output.put_line('given number'||no||'is odd.');
+	end if;
+end;
+/
