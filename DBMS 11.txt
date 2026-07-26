@@ -1,0 +1,19 @@
+create table areas
+(
+radius number(5),
+area number(14,2)
+);
+
+set serveroutput on;
+
+declare
+	pi constant number(9,7):=3.1415927;
+	radius number(5);
+	area number(14,2);
+begin
+	radius:=&radius;
+	area:=pi*power(radius,2);
+	insert into areas values (radius,area);
+	dbms_output.put_line('area is:'||area);
+end;
+/
