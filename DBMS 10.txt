@@ -1,0 +1,25 @@
+set serveroutput on;
+
+create table account
+(
+Acc_no varchar2(10),
+Balance number(7)
+);
+
+insert into account
+values
+('A01',50000);
+
+Example: write pl/sql block stores account number and balanc for account 'A01'
+         into variable 'no' and 'bal'.
+
+	input:
+declare
+	no account.acc_no%type;
+	bal account.balance%type;
+begin
+	select acc_no,balance into no,bal from Account where acc_no=&acno;
+	dbms_output.put_line('account no is:'||no);
+	dbms_output.put_line('balance is:'||bal);
+end;
+/
