@@ -1,0 +1,19 @@
+set serveroutput on
+declare
+	a number;
+	b number;
+	c number;	
+begin
+	a:=&no1;
+	b:=&no2;
+	dbms_output.put_line('The value of 1st no :- '||a);
+	dbms_output.put_line('The value of 2nd no :- '||b);
+	c:= a;
+
+	a:=b;
+	b:=c;
+	dbms_output.put_line('The value of 1st no after interchange :- '||a);
+	dbms_output.put_line('The value of 2nd no after interchange :- '||b);
+end;
+/
+	
