@@ -1,0 +1,17 @@
+DECLARE
+    S NUMBER(5):=0;
+    I NUMBER(5):=0;
+    A1 INTEGER;
+    A2 INTEGER;
+BEGIN
+    A1:=&NO1;
+    A2:=&NO2;
+    FOR LP IN A1..A2 LOOP
+        I:=LP;
+        IF(MOD(I,2)!=0) THEN
+            S:=S+I;
+        END IF;
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE('SUM OF ODD NUMBERS IS: '||S);
+END;
+/
