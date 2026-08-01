@@ -1,0 +1,15 @@
+DECLARE
+    S NUMBER:=0;
+    A1 NUMBER:=0;
+    A2 NUMBER:=0;
+BEGIN
+    A1:=&NO1;
+    A2:=&NO2;
+    WHILE A1<=A2 LOOP
+        S:=S+A1;
+        A1:=A1+1;
+        EXIT WHEN(A2<A1);
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE('SUM OF NUMBERS IS: '||S);
+END;
+/
