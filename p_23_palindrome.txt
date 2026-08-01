@@ -1,0 +1,25 @@
+-- WAP TO CHECK PALINDROME NUMBER.
+DECLARE
+    NO NUMBER(5);
+    REV NUMBER(5);
+    REM NUMBER(5);
+    ORIGINAL NUMBER(5);
+BEGIN
+    NO := &NO;
+    ORIGINAL := NO;
+    REV := 0;
+
+    WHILE NO > 0
+    LOOP
+        REM := MOD(NO,10);
+        REV := (REV * 10) + REM;
+        NO := FLOOR(NO / 10);
+    END LOOP;
+
+    IF ORIGINAL = REV THEN
+        DBMS_OUTPUT.PUT_LINE(REV || ' IS PALINDROME.');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE(REV || ' IS NOT PALINDROME.');
+    END IF;
+END;
+/
